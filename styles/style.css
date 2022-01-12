@@ -1,6 +1,6 @@
 /* all fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap');
 
 /* common styles and utilities */
 
@@ -102,4 +102,110 @@ top blogs styles
 .blog-author a {
     text-decoration: none;
     color: #562EFF;
+}
+
+
+/* ------------------
+latest courses styles
+---------------------*/
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+}
+
+.course-banner {
+    margin-bottom: 15px;
+}
+
+.course .course-banner img {
+    width: 225px;
+    height: 105px;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-title {
+    font-size: 20px;
+    color: #1E1E1E;
+    line-height: 24px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px 0px;
+}
+
+.course-author {
+    font-size: 15px;
+    color: #ED6B4F;
+    margin: 0px 0px;
+}
+
+.fa-star {
+    font-size: 13px;
+}
+
+.fa-star-half-alt {
+    font-size: 13px;
+}
+
+.fa-star.filled {
+    color: #FFC014;
+}
+
+.fa-star-half-alt.empty {
+    color: #FFC014;
+}
+
+.course-duration {
+    background-color: #FFE4E8;
+    border-radius: 15px;
+    padding: 5px;
+    color: #FF4A60;
+    font-size: 16px;
+}
+
+
+/* ------------------
+all media queries
+---------------------*/
+
+
+/* mobile devices */
+
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+    .courses {
+        display: none;
+    }
+}
+
+
+/* tablet devices */
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
